@@ -8,8 +8,10 @@ const Alert = (props) => {
     }
 
     return (
-        props.alert && <div className={`alert alert-${props.alert.type} w-50 my-2 m-auto`} role="alert">
+        <div style={{height:"5vh"}}>
+           { props.alert && <div className={`alert alert-${props.alert.type} w-50 my-2 m-auto`} role="alert">
             <strong>{capitalize(props.alert.type)}</strong>: {props.alert.msg}
+        </div>}
         </div>
     )
 }
